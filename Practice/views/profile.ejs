@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sample Index Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    main {
+      padding: 2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #ddd;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to  <%= person %> Profile </h1>
+  </header>
+  <main>
+    <p>This is a simple profile of <%= person %> </p>
+    <p> <strong>Age: </strong> <%= data.age %> </p>
+    <p> <strong>Job: </strong> <%= data.job %> </p>
+   
+    <h2>Hobbies</h2>
+    <ul>
+      <% data.hobbies.forEach(function(itme){ %>
+        <li><%= itme %></li>
+      <% }); %>
+    </ul>
+  </main>
+  <footer>
+    &copy; 2025 Your Name. All rights reserved.
+  </footer>
+</body>
+</html>
